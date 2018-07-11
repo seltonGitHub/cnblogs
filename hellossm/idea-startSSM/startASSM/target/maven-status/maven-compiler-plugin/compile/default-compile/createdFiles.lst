@@ -1,0 +1,5 @@
+com\selton\hellossm\service\serviceimpl\UserServiceImpl.class
+com\selton\hellossm\dao\UserDao.class
+com\selton\hellossm\entities\User.class
+com\selton\hellossm\service\UserService.class
+com\selton\hellossm\controller\UserController.class
