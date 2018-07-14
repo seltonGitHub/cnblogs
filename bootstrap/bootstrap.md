@@ -17,7 +17,12 @@
 
 <br>
 
-## Table of contents
+
+
+## Table of contents  
+
+[TOC]  
+
 
 - [Quick start](#quick-start)
 - [Why use it](#why-use)

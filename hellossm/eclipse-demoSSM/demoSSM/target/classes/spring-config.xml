@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+     <!--  引入外部的一个配置文件，
+     这个文件里放的全都是C3P0数据源连接池的配置
+     redis的配置文件
+     -->
+     <context:property-placeholder location="classpath:c3p0-config.properties" ></context:property-placeholder>
+     <!--引入spring-mybatis的配置文件-->
+     <import resource="spring-mybatis.xml"></import>
+
+
+     <!--  为了让SpringIoC可以基于注解来做，注解支持-->
+     <context:annotation-config/>
+     <!--指明注解的扫描包，即将来去哪个包里找注解
+     SpringIoC只管扫描service和dao即可
+     -->
+     <context:component-scan base-package="com.selton.hellossm.service,com.selton.hellossm.dao">
+     </context:component-scan>
+
+
+</beans>
